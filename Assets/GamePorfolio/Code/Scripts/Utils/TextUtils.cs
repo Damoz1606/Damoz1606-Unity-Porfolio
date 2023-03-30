@@ -8,6 +8,7 @@ public class TextUtils : MonoBehaviour
     public string Text;
 
     private string _text;
+    private bool _allowAction = false;
 
     private void Start()
     {
@@ -16,8 +17,19 @@ public class TextUtils : MonoBehaviour
         this._text = this.Text;
     }
 
+    public void EnableAction()
+    {
+        this._allowAction = true;
+    }
+    public void DisableAction()
+    {
+        this._allowAction = false;
+    }
+
     public void Copy()
     {
+        if (!this._allowAction) return;
+        this.DisableAction();
         TextEditor textEditor = new TextEditor();
         textEditor.text = this._text;
         textEditor.SelectAll();
@@ -26,6 +38,8 @@ public class TextUtils : MonoBehaviour
 
     public void OpenLink()
     {
+        if (!this._allowAction) return;
+        this.DisableAction();
         Application.OpenURL(this._text);
     }
 }

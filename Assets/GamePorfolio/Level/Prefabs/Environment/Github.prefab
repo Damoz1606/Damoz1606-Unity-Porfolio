@@ -361,12 +361,12 @@ PrefabInstance:
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
       propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
       propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
@@ -390,6 +390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
+      propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
       propertyPath: OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenLink
       objectReference: {fileID: 0}
@@ -400,9 +405,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
+      propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
       propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3142308878435232836}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
+      propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5750474028238107093}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
       propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -410,7 +425,17 @@ PrefabInstance:
       objectReference: {fileID: 3142308878435232836}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
+      propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5750474028238107093}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
       propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
+      propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
@@ -420,13 +445,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
+      propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
       propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowTootip
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
+      propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnableAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
       propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HideTootip
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
+      propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DisableAction
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
@@ -440,8 +480,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
+      propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TextUtils, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
       propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: TooltipUtils, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
+      propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TextUtils, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
@@ -455,7 +505,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
         type: 3}
+      propertyPath: OnEnableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
       propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425063194101789758, guid: 82a0a3195d8563245b3501e0bd9c70d2,
+        type: 3}
+      propertyPath: OnDisableInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
