@@ -33,8 +33,11 @@ public class BasicPlayerInteraction : MonoBehaviour
 
     public virtual void InteractWithObject()
     {
-        if (!this._input.interact || !this.canInteract) return;
-        if (this._currentInteraction == null) return;
+        if (!this._input.interact || !this.canInteract || this._currentInteraction == null)
+        {
+            this._input.interact = false;
+            return;
+        }
         this._currentInteraction.Interact();
         this._input.interact = false;
     }
