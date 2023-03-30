@@ -138,6 +138,36 @@ ModelImporter:
   - first:
       74: -1619264798407511811
     second: Circle.007|WoodAction.028
+  - first:
+      74: 179777506806491147
+    second: Circle.007|Circle.001Action
+  - first:
+      74: 4183542254460218008
+    second: Circle.007|Circle.002Action
+  - first:
+      74: -721372112248979886
+    second: Circle.007|Circle.002Action.001
+  - first:
+      74: 8718997694895025402
+    second: Circle.007|Circle.003Action.001
+  - first:
+      74: 2788317319239950948
+    second: Circle.007|Circle.003Action.002
+  - first:
+      74: -3502195034493650931
+    second: Circle.007|Cube.002Action
+  - first:
+      74: 4641553591480531708
+    second: Circle.007|Cube.003Action
+  - first:
+      74: 8332964827455551705
+    second: Circle.007|Cube.003Action.001
+  - first:
+      74: 6909424295894891392
+    second: Circle.007|PlaneAction.001
+  - first:
+      74: -5246623219567938022
+    second: Circle.007|PlaneAction.002
   externalObjects: {}
   materials:
     materialImportMode: 2

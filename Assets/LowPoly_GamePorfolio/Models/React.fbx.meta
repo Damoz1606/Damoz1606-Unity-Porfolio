@@ -273,6 +273,60 @@ ModelImporter:
   - first:
       74: 6179659151133752025
     second: Circle.005|WoodAction.028
+  - first:
+      74: 9198558584910476961
+    second: Circle.004|Circle.001Action
+  - first:
+      74: -3710303081346447268
+    second: Circle.004|Circle.002Action.001
+  - first:
+      74: 1898424969801627095
+    second: Circle.004|Circle.003Action.002
+  - first:
+      74: 6898629868005114539
+    second: Circle.004|Circle.006Action.001
+  - first:
+      74: 5613233910241642427
+    second: Circle.004|Circle.007Action
+  - first:
+      74: -655824339885054155
+    second: Circle.004|Cube.001Action.001
+  - first:
+      74: -2398221100816706982
+    second: Circle.004|Cube.002Action
+  - first:
+      74: -5229923054416928333
+    second: Circle.004|Cube.003Action
+  - first:
+      74: 506931388211178355
+    second: Circle.004|PlaneAction.002
+  - first:
+      74: -8047207143814360283
+    second: Circle.005|Circle.001Action
+  - first:
+      74: 831487011092149167
+    second: Circle.005|Circle.002Action.001
+  - first:
+      74: 5665831962928133282
+    second: Circle.005|Circle.003Action.002
+  - first:
+      74: -2869822155027701997
+    second: Circle.005|Circle.006Action.001
+  - first:
+      74: -5716060114822212772
+    second: Circle.005|Circle.007Action
+  - first:
+      74: -978554363507268666
+    second: Circle.005|Cube.001Action.001
+  - first:
+      74: -5897322529408545644
+    second: Circle.005|Cube.002Action
+  - first:
+      74: -6564588582039482048
+    second: Circle.005|Cube.003Action
+  - first:
+      74: 4686995753973174888
+    second: Circle.005|PlaneAction.002
   externalObjects: {}
   materials:
     materialImportMode: 2
