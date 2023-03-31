@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TextUtils : MonoBehaviour
 {
@@ -30,10 +31,17 @@ public class TextUtils : MonoBehaviour
     {
         if (!this._allowAction) return;
         this.DisableAction();
+#if UNITY_WEBGL
         TextEditor textEditor = new TextEditor();
         textEditor.text = this._text;
         textEditor.SelectAll();
         textEditor.Copy();
+#else
+        TextEditor textEditor = new TextEditor();
+        textEditor.text = this._text;
+        textEditor.SelectAll();
+        textEditor.Copy();
+#endif
     }
 
     public void OpenLink()
