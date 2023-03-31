@@ -6,22 +6,21 @@ public class TooltipUtils : MonoBehaviour
 {
     private LookAt _lookAt;
 
-    private void Start()
+    protected virtual void Start()
     {
-        if (TryGetComponent<LookAt>(out this._lookAt))
-        {
-            var target = GameObject.Find("PlayerFollowCamera");
-            if (target != null)
-                this._lookAt._Target = target.transform;
-        }
+        bool flag = TryGetComponent<LookAt>(out this._lookAt);
+        if (!flag) return;
+        var target = GameObject.Find("PlayerFollowCamera");
+        if (target != null)
+            this._lookAt.Target = target.transform;
     }
 
-    public void ShowTootip()
+    public virtual void ShowTootip()
     {
         this.gameObject.SetActive(true);
     }
 
-    public void HideTootip()
+    public virtual void HideTootip()
     {
         this.gameObject.SetActive(false);
     }

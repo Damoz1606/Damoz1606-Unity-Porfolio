@@ -4,16 +4,9 @@ using UnityEngine;
 
 public class LookAt : MonoBehaviour
 {
-    public Transform Target;
+    [SerializeField] private Transform _target;
 
-    private Transform _target;
-
-    public Transform _Target { get => _target; set => _target = value; }
-
-    private void Start()
-    {
-        this._Target = Target;
-    }
+    public Transform Target { get => _target; set => _target = value; }
 
     private void Update()
     {
@@ -22,6 +15,6 @@ public class LookAt : MonoBehaviour
 
     private void LookAtTarget()
     {
-        this.transform.LookAt(this._Target);
+        this.transform.LookAt(this._target);
     }
 }
