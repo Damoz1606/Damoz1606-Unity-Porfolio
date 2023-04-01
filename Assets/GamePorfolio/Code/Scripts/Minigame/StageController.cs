@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class StageController : MonoBehaviour
 {
-    private Image[] stages;
+    private List<Image> stages = new List<Image>();
 
     private int _currentStage;
 
     private void Awake()
     {
         this._currentStage = 0;
+        stages.AddRange(GetComponentsInChildren<Image>());
     }
 
     private void Start()
     {
-        stages = GetComponentsInChildren<Image>();
         this.StartStage();
     }
 
@@ -27,7 +27,7 @@ public class StageController : MonoBehaviour
 
     public void StartStage()
     {
-        if(this.stages.Length <= 0) return; 
+        if (this.stages.Count <= 0) return;
         foreach (var item in stages)
         {
             var tempColor = item.color;
@@ -38,7 +38,7 @@ public class StageController : MonoBehaviour
 
     public void NextStage()
     {
-        if (this._currentStage >= this.stages.Length) return;
+        if (this._currentStage >= this.stages.Count) return;
         var tempColor = stages[this._currentStage].color;
         tempColor.a = 1f;
         stages[this._currentStage].color = tempColor;

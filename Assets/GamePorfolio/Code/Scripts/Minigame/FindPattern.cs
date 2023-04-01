@@ -56,16 +56,16 @@ public class FindPattern : MonoBehaviour
         StartCoroutine(this.StartPatternCoroutine());
     }
 
-    private IEnumerator StartPatternCoroutine()
-    {
-        yield return new WaitForSeconds(1);
-        this.SelectPattern();
-    }
-
     public void NextPattern()
     {
         if (this._lastPatterns.Count >= this._patterns.Count) return;
         this._playedPattern.Clear();
+        StartCoroutine(this.StartPatternCoroutine());
+    }
+
+    private IEnumerator StartPatternCoroutine()
+    {
+        yield return new WaitForSeconds(1);
         this.SelectPattern();
     }
 
