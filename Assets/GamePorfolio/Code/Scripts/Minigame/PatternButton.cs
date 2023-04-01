@@ -26,9 +26,6 @@ public class PatternButton : MonoBehaviour
     private Button _button;
     private Image _imageBackground;
 
-
-    public UnityAction<string> OnPlayedPattern;
-
     public bool HasGameStarted { get => _hasGameStarted; set => _hasGameStarted = value; }
 
     private void Awake()
@@ -53,6 +50,12 @@ public class PatternButton : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        if (this._button != null)
+            this.changeAlpha();
+    }
+
     public void OnClicked()
     {
         if (!this.HasGameStarted) return;
@@ -60,7 +63,7 @@ public class PatternButton : MonoBehaviour
         {
             this._hasBeenClicked = true;
             PatternActive();
-            this.OnPlayedPattern.Invoke(this.gameObject.name);
+            MinigameFindPatternEventManager.Instance.OnPlayedButton(this.gameObject.name);
         }
     }
 

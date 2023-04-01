@@ -9,42 +9,68 @@ public class FindPattern : MonoBehaviour
     [SerializeField]
     [Range(0, 5)]
     private float _timeBetweenPatternButtons = 1;
-    [SerializeField] private List<Pattern> _patterns;
+    [SerializeField]
+    private List<Pattern> _patterns;
 
     private int _currentPattern;
-    private List<PatternButton> _buttons;
     private List<int> _lastPatterns = new List<int>();
+    private List<string> _playedPattern = new List<string>();
+    [SerializeField] private List<PatternButton> _buttons = new List<PatternButton>();
     private Dictionary<string, PatternButton> _buttonDictionary = new Dictionary<string, PatternButton>();
 
-    private List<string> _playedPattern = new List<string>();
 
-    void Start()
+    private void Awake()
     {
-        this._buttons = new List<PatternButton>(this.GetComponentsInChildren<PatternButton>());
+        this._buttons.AddRange(this.GetComponentsInChildren<PatternButton>());
         this.InitDictionary();
-        StartCoroutine(this.WaitToInitialize());
+    }
+
+    private void OnEnable()
+    {
+        MinigameFindPatternEventManager.Instance.OnStartPattern += this.StartPattern;
+        MinigameFindPatternEventManager.Instance.OnNextPattern += this.NextPattern;
+        MinigameFindPatternEventManager.Instance.OnPlayedButton += this.PlayedPattern;
+        
+    }
+
+    private void OnDisable()
+    {
+        MinigameFindPatternEventManager.Instance.OnStartPattern -= this.StartPattern;
+        MinigameFindPatternEventManager.Instance.OnNextPattern -= this.NextPattern;
+        MinigameFindPatternEventManager.Instance.OnPlayedButton -= this.PlayedPattern;
     }
 
     private void InitDictionary()
     {
-
+        this._buttonDictionary.Clear();
         this._buttons.ForEach(element =>
         {
             this._buttonDictionary.Add(element.gameObject.name, element);
-            element.OnPlayedPattern += this.PlayedPattern;
         });
     }
 
-    private IEnumerator WaitToInitialize()
+    public void StartPattern()
     {
-        yield return new WaitForSeconds(0.5f);
+        this._playedPattern.Clear();
+        this._lastPatterns.Clear();
+        StartCoroutine(this.StartPatternCoroutine());
+    }
+
+    private IEnumerator StartPatternCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        this.SelectPattern();
+    }
+
+    public void NextPattern()
+    {
+        if (this._lastPatterns.Count >= this._patterns.Count) return;
+        this._playedPattern.Clear();
         this.SelectPattern();
     }
 
     private void SelectPattern()
     {
-        if (this._lastPatterns.Count >= this._patterns.Count) return;
-        this._playedPattern.Clear();
         do
         {
             this._currentPattern = UnityEngine.Random.Range(0, this._patterns.Count);
@@ -52,12 +78,6 @@ public class FindPattern : MonoBehaviour
 
         StartCoroutine(SelectPatternCoroutine());
         this._lastPatterns.Add(this._currentPattern);
-        var count = 0;
-        foreach (var item in this._patterns[this._currentPattern].patterns)
-        {
-            Debug.Log($"{count} ${item}");
-            count++;
-        }
     }
 
 
@@ -89,12 +109,12 @@ public class FindPattern : MonoBehaviour
         else
         {
             this._playedPattern.Clear();
-            Debug.Log("Game over");
+            MinigameFindPatternEventManager.Instance.OnPatternGameOver.Invoke();
         }
         if (this._playedPattern.Count >= this._patterns[this._currentPattern].patterns.Count)
         {
             this._playedPattern.Clear();
-            Debug.Log("You won");
+            MinigameFindPatternEventManager.Instance.OnPatternComplete.Invoke();
         }
 
 

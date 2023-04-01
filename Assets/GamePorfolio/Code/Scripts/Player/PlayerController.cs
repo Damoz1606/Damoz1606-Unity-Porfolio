@@ -87,13 +87,13 @@ public class PlayerController : MonoBehaviour
 
     public bool BlockMovement { get => _blockMovement; set => _blockMovement = value; }
 
+    private void OnBlockMove() => this.BlockMovement = true;
+    private void OnUnblockMove() => this.BlockMovement = false;
+
     private void Awake()
     {
-        // get a reference to our main camera
         if (_mainCamera == null)
-        {
             _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        }
     }
 
     private void Start()
@@ -116,6 +116,18 @@ public class PlayerController : MonoBehaviour
         JumpAndGravity();
         GroundedCheck();
         Move();
+    }
+
+    private void OnEnable()
+    {
+        PlayerEvent.Instance.OnBlockMovement += this.OnBlockMove;
+        PlayerEvent.Instance.OnUnblockMovement += this.OnUnblockMove;
+    }
+
+    private void OnDisable()
+    {
+        PlayerEvent.Instance.OnBlockMovement -= this.OnBlockMove;
+        PlayerEvent.Instance.OnUnblockMovement -= this.OnUnblockMove;
     }
 
     private void AssignAnimationIDs()
