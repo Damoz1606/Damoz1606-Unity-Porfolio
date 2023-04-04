@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NPC_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: d752db4df03686649b67b6393c18fb4f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 147116634112
+    m_Localized: 'Izquierda: Zona de Juegos@Derecha: Projectos@Delante: Contacto'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347302375424
+    m_Localized: Hola y bienvendio a la prueba alfa@Explora y divertete@Si encuentras
+      algun error informa al creador del portafolio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 728510083072
+    m_Localized: Bienvenido, todos los elementos aqui me representan@Los modelos
+      y shaders se encuentran en construccion... Perdon por eso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749489991680
+    m_Localized: "\xBFQue?@Se supone que tiene que se un holograma!!@Porque es un
+      objeto solido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 787851096064
+    m_Localized: Aqui todos mis projectos se encontraran@Estoy decidiendo cuales
+      son cheveres@Considera este portafolio como un proyecto@jejeje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 810068324352
+    m_Localized: Hola, si quieres interactuar, por favor pulsa la tecla ENTER
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

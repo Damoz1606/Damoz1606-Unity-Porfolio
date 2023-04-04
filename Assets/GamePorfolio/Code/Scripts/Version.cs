@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Version : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI _version;
+    private TMPro.TextMeshProUGUI _version;
+
+    private void Awake()
+    {
+        this._version = GetComponent<TMPro.TextMeshProUGUI>();
+        if (!this._version)
+            this._version = GetComponentInChildren<TMPro.TextMeshProUGUI>();
+    }
 
     private void Start()
     {
-        bool hasText = TryGetComponent<TMPro.TextMeshProUGUI>(out _version);
-        if(!hasText) throw new System.Exception("Set a text MeshPro for a version");
         this._version.text = Application.version;
     }
 }

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NPC_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: d752db4df03686649b67b6393c18fb4f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 147116634112
+    m_Localized: 'Left: Playground@Right: Projects@Front: Contacts'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347302375424
+    m_Localized: Hi and welcome to the alpha test@Explore and enjoy@If you find and
+      error tell the creator of the porfolio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 728510083072
+    m_Localized: Welcome, every item here represents myself@Now the models and shaders
+      are on construction... Sorry for that
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749489991680
+    m_Localized: What?@ It's suppose to be an hologram!!@ Why is a solid object?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 787851096064
+    m_Localized: Here all my the projects will be@Now I'm deciding which ones are
+      really cool@Consider this porfolio as a project@ jejeje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 810068324352
+    m_Localized: Hi, if you want to interact, please press ENTER key
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -11,10 +11,24 @@ public class PresentationController : DialogueController
     [TextArea(5, 10)]
     public string Text;
 
+    private string _text;
+
+    public string TextMessage { get => _text; set => _text = value; }
+
     protected override void Start()
     {
         base.Start();
-        this.StartDialogue(this.Text);
+        this.TextMessage = Text;
+    }
+
+    private void OnEnable()
+    {
+        this.TextMessage = Text;
+    }
+
+    public void InitMessage()
+    {
+        this.StartDialogue(this.TextMessage);
         this.NextSentence();
     }
 }

@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 6585355405598929866}
   - component: {fileID: 5089734351927116075}
   - component: {fileID: 5355308382082889584}
-  m_Layer: 7
+  - component: {fileID: 773919917}
+  m_Layer: 6
   m_Name: Direction_Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6585355405598929866
 Transform:
@@ -60,13 +61,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8fafb0cb5821254c8728df6dc74b902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  Text: 
-  AllowZoom: 0
-  TargetFOV: 20
-  ZoomSpeed: 1
+  Text: 'Left: Playground@Right: Projects@Front: Contact'
+--- !u!114 &773919917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609344407094187582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:d752db4df03686649b67b6393c18fb4f
+    m_TableEntryReference:
+      m_KeyId: 147116634112
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5355308382082889584}
+        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
+        m_MethodName: set_TextMessage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &5084722218421524073
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +243,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4e04e830aab0a2f4c9cc76b228cdbd62,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e04e830aab0a2f4c9cc76b228cdbd62, type: 3}
 --- !u!4 &2688537719571046747 stripped
@@ -292,6 +332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ed649359f87cd644b95de308cc88668,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ed649359f87cd644b95de308cc88668, type: 3}
@@ -513,6 +558,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ed649359f87cd644b95de308cc88668,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ed649359f87cd644b95de308cc88668, type: 3}
 --- !u!4 &7125900508148595439 stripped
@@ -607,6 +657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ed649359f87cd644b95de308cc88668,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ed649359f87cd644b95de308cc88668, type: 3}

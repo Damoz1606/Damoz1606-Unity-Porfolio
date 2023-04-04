@@ -34,7 +34,7 @@ public class DialogueController : MonoBehaviour
         if (this._hasSoundEffect) this._sxEffect = this.SxEffect;
         this.dialogueText.text = "";
         this.canvas = this.GetComponent<CanvasGroup>();
-        this.canvas.alpha = 0;
+        if (this.canvas != null) this.canvas.alpha = 0;
     }
 
     public virtual void StartDialogue(string dialogue)
@@ -53,7 +53,7 @@ public class DialogueController : MonoBehaviour
         this.HasDialogueStarted = false;
         this._currentIndex = 0;
         this._dialogueIsBeenWritting = false;
-        this.canvas.alpha = 0;
+        if (this.canvas != null) this.canvas.alpha = 0;
     }
 
     public virtual void NextSentence()
@@ -61,7 +61,7 @@ public class DialogueController : MonoBehaviour
         if (!this.HasDialogueStarted) return;
         if (this._currentIndex <= this.Sentences.Count - 1)
         {
-            this.canvas.alpha = 1;
+            if (this.canvas != null) this.canvas.alpha = 1;
             this.dialogueText.text = string.Empty;
             StartCoroutine(WriteSentence());
         }

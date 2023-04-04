@@ -15,16 +15,22 @@ public class PatternButton : MonoBehaviour
     public int NonClickedAlpha = 100;
     [SerializeField]
     [Range(0, 255)]
-    private int ClickedAlpha = 255;
+    public int ClickedAlpha = 255;
+    [SerializeField]
+    public AudioClip Click;
 
-    [SerializeField] private bool _hasGameStarted = false;
+    private bool _hasGameStarted = false;
     private bool _hasBeenClicked = false;
 
     private float _nonClickedAlpha;
     private float _clickedAlpha;
     private float _patternActiveTime = 0.75f;
+
     private Button _button;
+
     private Image _imageBackground;
+
+    private AudioClip _click;
 
     public bool HasGameStarted { get => _hasGameStarted; set => _hasGameStarted = value; }
 
@@ -32,6 +38,7 @@ public class PatternButton : MonoBehaviour
     {
         this._nonClickedAlpha = NonClickedAlpha;
         this._clickedAlpha = ClickedAlpha;
+        this._click = this.Click;
     }
 
     private void Start()
@@ -74,6 +81,7 @@ public class PatternButton : MonoBehaviour
 
     private IEnumerator PatternActiveCoroutine()
     {
+        AudioSource.PlayClipAtPoint(this._click, Vector3.zero, 1);
         changeAlpha(false);
         yield return new WaitForSeconds(this._patternActiveTime);
         changeAlpha(true);

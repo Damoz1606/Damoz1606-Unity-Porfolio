@@ -10,7 +10,7 @@ public class TooltipUtils : MonoBehaviour
     {
         bool flag = TryGetComponent<LookAt>(out this._lookAt);
         if (!flag) return;
-        var target = GameObject.Find("PlayerFollowCamera");
+        var target = GameObject.Find("PlayerCamera");
         if (target != null)
             this._lookAt.Target = target.transform;
     }

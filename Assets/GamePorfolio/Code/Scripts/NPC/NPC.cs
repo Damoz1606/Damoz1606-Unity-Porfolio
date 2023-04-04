@@ -14,9 +14,11 @@ public class NPC : MonoBehaviour
     private string text;
     private _AInteractableObject _interaction;
 
+    public string TextMessage { get => text; set => text = value; }
+
     private void Start()
     {
-        this.text = this.Text;
+        this.TextMessage = this.Text;
         
         this.dialogue = this.GetComponentInChildren<DialogueController>();
         if (this.dialogue == null) throw new System.Exception("You need to have a Dialogue Controller in child");
@@ -33,7 +35,7 @@ public class NPC : MonoBehaviour
 
     public void EnableInteraction()
     {
-        this.dialogue.StartDialogue(this.text);
+        this.dialogue.StartDialogue(this.TextMessage);
     }
 
     public void Interact()

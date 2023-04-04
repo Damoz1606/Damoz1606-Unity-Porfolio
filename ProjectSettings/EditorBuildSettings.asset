@@ -14,4 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GamePorfolio/Scenes/GamePorfolio.unity
     guid: 256ac1782877a584590e52a8799c6be0
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 22a3a194f9f902f4aa496b8010628ddc,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 37e5920485864a143808ec66bf8ffffe,
+      type: 2}
