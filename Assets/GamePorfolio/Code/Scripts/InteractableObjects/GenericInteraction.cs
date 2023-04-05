@@ -14,16 +14,16 @@ public class GenericInteraction : _AInteractableObject
 
     public override void DisableInteraction()
     {
-        this.OnDisableInteraction.Invoke();
+        this.OnDisableInteraction?.Invoke();
     }
 
     public override void EnableInteraction()
     {
-        this.OnEnableInteraction.Invoke();
+        this.OnEnableInteraction?.Invoke();
     }
 
     public override void Interact()
     {
-        this.OnInteraction.Invoke();
+        this.OnInteraction?.Invoke();
     }
 }

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: SIGN Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: SIGN
+  m_TableCollectionNameGuidString: cf76e124da035e345997634daf22538e
+  m_Entries:
+  - m_Id: 8469721088
+    m_Key: PLAYGROUND_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85275815936
+    m_Key: PROJECTS_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 187163848704
+    m_Key: CONTACT_TITLE
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3598773128880455724
+  references:
+    version: 2
+    RefIds:
+    - rid: 3598773128880455724
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1680653171135

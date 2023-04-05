@@ -173,8 +173,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 75}
-  m_SizeDelta: {x: -150, y: 75}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: -100, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &134732817309581600
 CanvasRenderer:
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 134732817664435990}
   - component: {fileID: 134732817664435991}
   - component: {fileID: 134732817664435988}
-  - component: {fileID: 6408534658131326044}
+  - component: {fileID: 8463831134528916326}
   - component: {fileID: 111481942634816545}
   m_Layer: 5
   m_Name: NPC-UI
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!225 &6408534658131326044
+--- !u!225 &8463831134528916326
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

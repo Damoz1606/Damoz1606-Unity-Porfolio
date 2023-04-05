@@ -6,22 +6,26 @@ public class GenericTooltipUtils : TooltipUtils
 {
 
     [Header("Tooltip message")]
-    public string Text;
+    public string text;
     public float TimeToHide = 5f;
 
-    private TextMeshPro _textMesh;
+    private string _text;
     private float _timeToHide;
+    private TextMeshPro _textMesh;
 
-    private void Awake() {
+    public string Text { get => _text; set => _text = value; }
+
+    private void Awake()
+    {
+        this.Text = this.text;
         this._timeToHide = this.TimeToHide;
+        this._textMesh = this.GetComponentInChildren<TextMeshPro>();
+        if (this._textMesh == null) throw new System.Exception("Set a TextMeshPro in children");
     }
 
     protected override void Start()
     {
         base.Start();
-        var textTooltip = this.GetComponentInChildren<TextMeshPro>();
-        if (textTooltip == null) throw new System.Exception("Set a TextMeshPro in children");
-        textTooltip.text = this.Text;
     }
 
     public override void HideTootip()
@@ -31,6 +35,7 @@ public class GenericTooltipUtils : TooltipUtils
 
     public override void ShowTootip()
     {
+        this._textMesh.text = this.Text;
         base.ShowTootip();
         this.HideTootip();
     }

@@ -19,7 +19,7 @@ public class NPC : MonoBehaviour
     private void Start()
     {
         this.TextMessage = this.Text;
-        
+
         this.dialogue = this.GetComponentInChildren<DialogueController>();
         if (this.dialogue == null) throw new System.Exception("You need to have a Dialogue Controller in child");
 

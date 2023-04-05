@@ -19,6 +19,14 @@ MonoBehaviour:
     m_Key: BUTTON_START
     m_Metadata:
       m_Items: []
+  - m_Id: 355953217482752
+    m_Key: BUTTON_NEXT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 356019764310016
+    m_Key: BUTTON_EXIT
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

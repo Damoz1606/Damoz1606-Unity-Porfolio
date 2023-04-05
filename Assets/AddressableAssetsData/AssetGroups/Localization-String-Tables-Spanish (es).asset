@@ -35,6 +35,48 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     - Preload
+  - m_GUID: b400bc4eb31d7b3449c0cf358f46f041
+    m_Address: INTRODUCTION_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: 9bf07a4e7915c3747a1166d3e9f1a6b2
+    m_Address: PROJECT_PORFOLIO_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: 5b9f50d04847ec54da995f687c4d59d4
+    m_Address: COMING_SOON_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: 2cea2141f2bf1e64a81c6540323528bf
+    m_Address: TOOLTIP_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: a884a413a92261249b9fd4c0a563a1f9
+    m_Address: MINIGAME_FOLLOW_PATTERN_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: 2492ece22fb9c6c40ad437aeafa2f185
+    m_Address: MINIGAME_FOLLOW_MAZE_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: a03e0888863cdcc4b9053da3f0c9d0cb
+    m_Address: SIGN_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 4c0a2f6f8e52aac4487c916a091812c8, type: 2}
   m_SchemaSet:
